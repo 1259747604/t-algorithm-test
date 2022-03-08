@@ -42,9 +42,9 @@ const reverseList = head => {
 
   while (cur) {
     let next = cur.next;
-    cur.next = pre;
-    pre = cur;
-    cur = next;
+    cur.next = pre; //断开接上上一个 如 1->null 2->1->null
+    pre = cur; // 重新赋值翻转
+    cur = next; //重新赋值当前节点
   }
 
   return pre;
